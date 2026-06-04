@@ -1,0 +1,313 @@
+/* Design Tokens from Figma - Sign up v2 Design System */
+
+:root {
+  /* Colors */
+  --color-primary: #5B21B6;
+  --color-dark-grey: #353638;
+  --color-light-bg: #ffffff;
+  --color-error: #DC2626;
+  --color-error-light: #FEF2F2;
+  --color-error-border: #FECACA;
+  --color-success: #86EFAC;
+  --color-success-light: #DCFCE7;
+  --color-success-dark: #166534;
+  --color-text-primary: #3B3B3B;
+  --color-text-secondary: #474A5F;
+  --color-text-muted: #8390A2;
+  --color-text-form-muted: #292D32;
+  --color-border: #B9B9B9;
+  
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 40px;
+  --spacing-4xl: 103px;
+  
+  /* Border Radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 20px;
+  --border-radius-lg: 56px;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Satoshi', sans-serif;
+  
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 33px;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+  
+  /* Component Heights */
+  --height-input: 48px;
+  --height-button: 48px;
+  --height-icon: 24px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  /* Form Layout */
+  --form-width: 400px;
+  --form-padding: 40px;
+  --form-gap-sections: 30px;
+  --form-gap-heading: 32px;
+  --form-gap-fields: 20px;
+  --form-gap-label: 8px;
+  --form-border-radius: 56px;
+}
+
+/* Reset base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  background-color: var(--color-light-bg);
+  line-height: var(--line-height-normal);
+}
+
+/* Typography utility styles */
+.text-heading-lg {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.text-heading-md {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+/* Form Heading */
+.form-heading {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.26;
+  letter-spacing: 0.208px;
+}
+
+/* Form Subtitle */
+.form-subtitle {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.26;
+}
+
+/* Form Label */
+.form-label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+/* Form Input */
+.form-input {
+  width: 100%;
+  height: var(--height-input);
+  padding: 0 var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-light-bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(91, 33, 182, 0.1);
+}
+
+.form-input.error {
+  border-color: var(--color-error);
+  background-color: var(--color-error-light);
+}
+
+/* Form Button */
+.form-button {
+  width: 100%;
+  height: var(--height-button);
+  background-color: var(--color-primary);
+  color: var(--color-light-bg);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.form-button:hover {
+  opacity: 0.9;
+}
+
+.form-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Link */
+.form-link {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  text-align: center;
+}
+
+.form-link-action {
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: var(--form-width);
+  gap: var(--form-gap-sections);
+}
+
+/* Form Field Group */
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-gap-label);
+  margin-bottom: var(--form-gap-fields);
+}
+
+/* Form Input Container (for icon positioning) */
+.form-input-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Form Input Icon */
+.form-input-icon {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Error Text */
+.form-error-text {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  color: var(--color-error);
+  margin-top: 4px;
+  margin-left: 0;
+}
+
+/* Success Message */
+.form-message-success {
+  width: var(--form-width);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-success-light);
+  border: 1px solid var(--color-success);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-success-dark);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Error Message */
+.form-message-error {
+  width: var(--form-width);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-error-light);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--border-radius-sm);
+  color: #991B1B;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Footer Text */
+.footer-text {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-form-muted);
+  text-align: center;
+  line-height: 1.26;
+  margin: 0;
+}
+
+.text-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+.text-body {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+.text-caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
