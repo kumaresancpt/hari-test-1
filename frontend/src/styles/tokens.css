@@ -1,0 +1,12 @@
+:root {
+  --color-primary: #5b21b6;
+  --color-secondary-dark: #353638;
+  --color-panel-bg: #ffffff;
+  --color-field-border: #b9b9b9;
+  --color-field-text: #8390a2;
+  --color-muted: #474a5f;
+  --color-tab-bg: #f3f3f3;
+  --radius-panel: 56px;
+  --radius-pill: 48px;
+  --radius-control: 8px;
+}
